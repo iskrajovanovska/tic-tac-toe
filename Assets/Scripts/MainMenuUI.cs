@@ -3,19 +3,41 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
+    public RectTransform settingsButton;
+    private bool isPortrait;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        ApplyLayout();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        bool currentPortrait = Screen.height >= Screen.width;
+
+        if (currentPortrait != isPortrait)
+        {
+            ApplyLayout();
+        }
     }
 
+    void ApplyLayout()
+    {
+        isPortrait = Screen.height >= Screen.width;
+
+        if (isPortrait)
+        {
+            Vector2 pos = settingsButton.anchoredPosition;
+            pos.y = 1460;
+            settingsButton.anchoredPosition = pos;
+        }
+        else
+        {
+            Vector2 pos = settingsButton.anchoredPosition;
+            pos.y = 590;
+            settingsButton.anchoredPosition = pos;
+        }
+    }
     public void ShowPanel(GameObject panelToShow)
     {
         panelToShow.SetActive(true);
@@ -39,15 +61,13 @@ public class MainMenuUI : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Game scene");
-    }
 
-    public void StatsProvide() {
-        /*totalGamesText.text = StatsManager.Instance.GetTotalGames().ToString();
-        p1WinsText.text = StatsManager.Instance.GetPlayer1Wins().ToString();
-        p2WinsText.text = StatsManager.Instance.GetPlayer2Wins().ToString();
-        drawsText.text = StatsManager.Instance.GetDraws().ToString();
-
-        avgTimeText.text = StatsManager.Instance.GetAverageGameTime().ToString("F2");*/
+        if (isPortrait)
+        {
+            Vector2 pos = settingsButton.anchoredPosition;
+            pos.y = 520f;
+            settingsButton.anchoredPosition = pos;
+        }
     }
 
     public void ExitGame() { 

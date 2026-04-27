@@ -21,8 +21,6 @@ public class GameMenuUI : MonoBehaviour
             clickedButton.interactable = false;
 
             movesX += 1;
-
-            CheckGameState();
         }
         else { //...otherwise it is O
             Image img = clickedButton.GetComponent<Image>();
@@ -34,44 +32,7 @@ public class GameMenuUI : MonoBehaviour
             clickedButton.interactable = false;
 
             movesO += 1;
-
-            CheckGameState();
         }
     }
 
-    /*
-     using UnityEngine;
-using UnityEngine.UI; // Required for Image and Button components
-
-public class SpriteMatcher : MonoBehaviour {
-    public Button myButton;
-    public Sprite selectedSprite; // The sprite you want to check against
-
-    public void CheckSpriteMatch() {
-        // Access the Image component's sprite property
-        Sprite buttonSprite = myButton.GetComponent<Image>().sprite;
-
-        if (buttonSprite == selectedSprite) {
-            Debug.Log("The sprites match!");
-        } else {
-            Debug.Log("The sprites do not match.");
-        }
-    }
-}
-
-
-
-            // Find the GameObject named "MyButtonName" and get its Button component
-        Button myButton = GameObject.Find("MyButtonName").GetComponent<Button>();
-
-        if (myButton != null) {
-            myButton.onClick.AddListener(() => Debug.Log("Button clicked!"));
-        }
-     */
-
-    public void CheckGameState()
-    {
-
-
-    }
 }

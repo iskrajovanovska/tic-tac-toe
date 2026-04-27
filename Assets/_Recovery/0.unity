@@ -5455,7 +5455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -6291,7 +6291,6 @@ GameObject:
   - component: {fileID: 1988702606}
   - component: {fileID: 1988702616}
   - component: {fileID: 1988702617}
-  - component: {fileID: 1988702618}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6395,12 +6394,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988702605}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11a3144dd377eec43bf15061166c21ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuUI
-  settingsButton: {fileID: 0}
+  settingsButton: {fileID: 1734018545}
 --- !u!114 &1988702617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6415,19 +6414,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   bgmSource: {fileID: 1384105512}
   sfxSource: {fileID: 1441738713}
---- !u!114 &1988702618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988702605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11a3144dd377eec43bf15061166c21ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MainMenuUI
-  settingsButton: {fileID: 1734018545}
 --- !u!1 &2013715763
 GameObject:
   m_ObjectHideFlags: 0

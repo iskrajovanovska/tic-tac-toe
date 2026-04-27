@@ -100,13 +100,7 @@ public class GameManager : MonoBehaviour
 
         cells[index].interactable = false;
         moveCount++;
-        /*
-        if (CheckWin())
-        {
-            EndGame(isPlayer1Turn ? 1 : 2);
-            return;
-        }
-        */
+
         int winIndex = CheckWin();
 
         if (winIndex != -1)
@@ -124,33 +118,6 @@ public class GameManager : MonoBehaviour
 
         isPlayer1Turn = !isPlayer1Turn;
     }
-
-    /* bool CheckWin()
-     {
-         int[,] winPatterns = new int[,]
-         {
-             {0,1,2}, {3,4,5}, {6,7,8},
-             {0,3,6}, {1,4,7}, {2,5,8},
-             {0,4,8}, {2,4,6}           
-         };
-
-         for (int i = 0; i < winPatterns.GetLength(0); i++)
-         {
-             int a = winPatterns[i, 0];
-             int b = winPatterns[i, 1];
-             int c = winPatterns[i, 2];
-
-             if (board[a] != CellState.Empty &&
-                 board[a] == board[b] &&
-                 board[a] == board[c])
-             {
-                 return true;
-             }
-         }
-
-         return false;
-     }
-    */
 
     int CheckWin()
     {

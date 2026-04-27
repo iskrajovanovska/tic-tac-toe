@@ -10,11 +10,8 @@ public class SettingsController : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("SETTINGS AWAKE: " + gameObject.name);
-
         if (Instance != null && Instance != this)
         {
-            Debug.Log("DESTROYING DUPLICATE: " + gameObject.name);
             Destroy(gameObject);
             return;
         }
@@ -25,7 +22,6 @@ public class SettingsController : MonoBehaviour
 
     public void Open()
     {
-        Debug.Log("OPEN CALLED");
         panel.SetActive(true);
 
         musicToggle.isOn = AudioManager.Instance.IsMusicOn();
@@ -34,7 +30,6 @@ public class SettingsController : MonoBehaviour
 
     public void Close()
     {
-        Debug.Log("CLOSE CALLED");
         panel.SetActive(false);
     }
 }
