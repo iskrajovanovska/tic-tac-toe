@@ -28,13 +28,13 @@ public class MainMenuUI : MonoBehaviour
         if (isPortrait)
         {
             Vector2 pos = settingsButton.anchoredPosition;
-            pos.y = 1460;
+            pos.y = 500;
             settingsButton.anchoredPosition = pos;
         }
         else
         {
             Vector2 pos = settingsButton.anchoredPosition;
-            pos.y = 590;
+            pos.y = 50;
             settingsButton.anchoredPosition = pos;
         }
     }
